@@ -8,8 +8,7 @@ from ViewBooks import *
 from IssueBook import *
 from ReturnBook import *
 
-def start():
-    pass
+
 # Add your own database name and password here to reflect in the code
 mypass = "2642"
 mydatabase="mydb"
@@ -22,9 +21,10 @@ root.title("IIUC Central Library")
 root.iconbitmap('logo.ico')
 #img = PhotoImage('logo.png')
 #root.iconphoto(True, img)
-root.resizable(0,0)
 #root.minsize(width=400,height=400)
+#root.maxsize(width=400,height=400)
 root.geometry("600x500")
+root.resizable(0,0)
 
 # Take n greater than 0.25 and less than 5
 same=True
@@ -47,7 +47,7 @@ Canvas1 = Canvas(root)
 
 Canvas1.create_image(300,340,image = img)      
 Canvas1.config(bg="white",width = newImageSizeWidth, height = newImageSizeHeight)
-Canvas1.pack(expand=True,fill=BOTH)
+Canvas1.pack(expand=False,fill=BOTH)
 
 headingFrame1 = Frame(root,bg="#FFBB00",bd=5)
 headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.6,relheight=0.16)
